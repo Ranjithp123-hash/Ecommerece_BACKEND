@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            /* flex-direction: column; */
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(#2193b0,#6dd5ed);
+            height: 100vh;
+            width: 100%;
+        }
+        .form-container{
+            width: 300px;
+            height: 180px;
+            border-radius: 6px;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            text-align: left; 
+            padding-left: 12px;
+            padding-right: 10px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+
+        }
+
+        h1{
+            text-align: center;
+            color: #475569;
+            font-family: "Roboto";
+            font-weight: 600;
+            font-size: 32px;
+        }
+
+        .input-password{
+            background-color: #e2e8f0;
+            color: #64748b;
+            border-radius: 6px;
+            margin-top: 5px;
+            padding: 8px 16px 8px 16px;
+            font-size: 16px;
+            border: 1px solid #d7dfe9;  
+            width: 85%;
+            margin-bottom: 6px;        
+        }
+
+        .label-input{
+            color: #475569;
+            margin: 0px;
+            font-family: "Roboto";
+            line-height: 16px;
+            font-family: "Roboto";
+            font-size: 14px;
+            font-weight: bold;
+        } 
+        .button {
+            height: 25px;
+            width: 50%;
+            margin: auto;
+            margin-top: 20px;
+            background-color: #0b69ff ;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+            font-family: 'Roboto';
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            outline: none;
+        }
+
+    </style>
+    <script>
+
+        var status =  `<%- JSON.stringify(status) %>`;
+        // console.log(status)
+        if (JSON.parse(status) == "verified"){
+            if (confirm("Do want to login?")){
+                window.location.href = "http://localhost:3004/login";
+            }
+        } 
+    </script>
+   
+</head>
+<body>
+  
+   <div>
+    <!-- <h1><%= email%></h1> -->
+    <h1>Reset Password</h1>
+    <form class ="form-container" action="" method="post">
+        <div>
+        <label class="label-input" htmlFor="password">password</label>
+        <input required type="password" class="input-password"
+        placeholder="password" 
+        name ="password" 
+        id ="password"/>
+    </div>
+    <div>
+        <label class="label-input" htmlFor="confirmpassword">confirm Password</label>
+        <input required class="input-password" type="password" placeholder="confirm-password" name ="confirm-password" 
+        id ="confirmpassword"/> 
+    </div>
+        <!-- <input type="submit" value="submit"/> -->
+        <button class="button" type="submit">submit</button>
+     </div> 
+    </form>
+</div>
+    
+</body>
+</html>

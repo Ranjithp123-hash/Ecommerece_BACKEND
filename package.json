@@ -1,0 +1,31 @@
+{
+  "n1.0.0ame": "nodejs",
+  "version": "",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Ranjith",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "browserify-zlib": "^0.2.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "crypto-browserify": "^3.12.0",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^7.4.3",
+    "nodemailer": "^6.9.4",
+    "nodemon": "^3.0.1",
+    "path-browserify": "^1.0.1",
+    "querystring-es3": "^0.2.1",
+    "stream-browserify": "^3.0.0",
+    "util": "^0.12.5"
+  }
+}
